@@ -1,0 +1,36 @@
+//===== PARAGRAPHS =====
+
+//Remember to @include mixin in style.scss
+@mixin paragraphs {
+	p {
+		padding: 10px 0;
+
+		@include respond-to(lg) {
+			font-size: 0.9em;
+			line-height: 1.25em;
+    }
+		@include respond-to(md) {
+			font-size: 0.85em;
+			line-height: 1.3em;
+			padding: 6px 0;
+		}
+	}
+	p.caption {		
+		@include respond-to(md) {
+			font-size: 0.65em;
+			line-height: 1.2em;
+		}
+		@include respond-from(md) {
+			font-size: 0.7em;
+			line-height: 1.3em;
+		}
+	}
+  p img {		
+		@include respond-to(md) {
+			width: 100%;
+		}
+		@include respond-from(md) {
+			width: inherit;
+		}
+  }
+}

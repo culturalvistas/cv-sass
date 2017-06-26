@@ -1,0 +1,18 @@
+//===== SUPPORT =====
+
+//Remember to @include mixin in style.scss
+@mixin support {
+	.support {
+		background-color: rgba(51,51,51,0.84);  //$cv-dark-gray with 84% opacity
+    
+    h2, p {
+      color: white;
+      text-align: center;
+    }
+  }
+  .support-bg {
+		background-image: url("../img/featured-page_about-us-1300x325.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;    
+  }
+}

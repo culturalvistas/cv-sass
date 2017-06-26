@@ -1,0 +1,32 @@
+//===== LINKS =====
+
+//Placeholder - Inline Text Links
+%text-links {
+	color: $base-font-color;
+	transition: $hover-text;
+	
+	&:active,
+	&:focus,
+	&:hover {
+		color: darken($base-font-color, 22%);
+		background-color: initial;
+		cursor: pointer;
+	}
+}
+
+//Remember to @include mixin in style.scss
+@mixin links {
+	a {
+		text-decoration: none;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			color: darken($base-font-color, 10%);
+		}
+	}
+	p a {
+		@extend %text-links;
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,139 @@
+//===== NAVIGATION BAR =====
+
+//Remember to @include mixin in style.scss
+@mixin nav {
+	.nav-bg {
+			background-color: $nav-bg-color;
+	}
+	.nav {
+    padding-top: 0;
+    padding-bottom: 0;
+		position: relative;
+		height: 70px;	 //based on cv website
+    
+		@include respond-from(md) {
+			max-width: 94vw;
+		}
+
+		li {
+			font-weight: 400;
+			font-size: 1em;
+			list-style-type: none;
+		}
+	}
+	.nav-logo {
+    background: no-repeat $nav-logo-bg-color $logotype;
+		background-size: contain;
+    width: 132px;
+    height: 168px;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		
+		@include respond-from(md) {
+      width: 165px;
+      height: 210px;
+		}
+   }
+	.nav-dropdown {
+		position: absolute;
+		right:0;
+		z-index: 2;
+    
+		@include respond-to(md) {
+			top: 30%;	 //to vertically center it
+		}
+		@include respond-from(md) {
+			top: 25%;	 //to vertically center it
+		}
+		
+		&.open .dropdown-toggle {
+			color: darken(white, 30%);
+		}
+	}
+	.dropdown-toggle {
+		font-size: 1.4em;  //relative to bootstrap
+		color: white;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		
+		@include respond-from(md) {
+			display: none;
+		}
+	}
+	.dropdown-menu {
+		@extend %font-reset;
+		box-shadow: -3px -3px 15px -5px $cv-warm-gray;
+		border-radius: 0;
+		border: none;
+		margin-top: 15px;
+		text-align: center;
+		left: auto;
+		right: 0;
+		
+		@include respond-from(md) {
+      background-color: $nav-bg-color;
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			box-shadow: none;
+			
+			& li {
+				float:left;
+			}
+		}
+	}
+	
+	.dropdown-menu li a {
+		@extend %text-links;
+		padding: 10px 40px;
+
+		@include respond-to (md) {
+			&:active,
+			&:focus,
+			&:hover {
+				background-color: $alt-bg-color;
+			}
+		}
+		@include respond-from(md) {
+      color: white;
+			font-size: 0.875em;
+			margin-left: 30px;
+			padding: 0;
+			
+			&:active,
+			&:focus,
+			&:hover {
+        color: darken(white, 30%);
+				background-color: transparent;
+			}
+		}
+		@include respond-from(lg) {
+			font-size: 0.975em;
+			margin-left: 40px;
+		}
+	}
+	.dropdown-menu li:first-child a {
+		margin-left: 0;
+	}
+	a.dropdown-toggle {
+		@extend %text-links;
+		color: white;
+		text-decoration: none;
+		cursor: pointer;
+		
+		&:active,
+		&:focus,
+		&:hover{
+			color: darken(white, 30%);
+			background-color: initial;
+		}
+	}
+	.nav .open > a,
+	.nav .open > a:active,
+	.nav .open > a:focus,
+	.nav .open > a:hover{
+		background-color: transparent;
+	}
+}

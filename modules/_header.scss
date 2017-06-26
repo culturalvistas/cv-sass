@@ -1,0 +1,112 @@
+//===== HEADER =====
+
+//Remember to @include mixin in style.scss
+@mixin header {
+	.hero-image {
+		@include respond-to(md) {
+			background: $cover-image-mobile;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		@include respond-from(md) {
+			background: $cover-image;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 100% 60%;
+		}
+		@include respond-from(lg) {
+			background-position: 100% 30%;
+		}
+	}
+	.hero {
+		min-height: 200px;
+		
+		@include respond-to(md) {
+			height: 40vw;
+		}
+		@include respond-from(md) {
+			height: 500px;
+		}
+		@include respond-from(lg) {
+			background-position: 100% 80%;
+		}
+		@include respond-from(xl) {
+			background-position: 100% 70%;
+		}
+		
+		h1,
+		p {
+			text-align: right;
+		}
+		p {
+			color: white;
+			@include respond-to(lg) {
+				margin-top: 245px;
+			}
+			@include respond-from(lg) {
+				margin-top: 240px;				
+			}
+		}
+	}
+	.center-outer {
+		height: 100%;
+		width: 100%;
+		display: table;
+		position: relative;
+		
+		@media (min-width: 500px) {
+			min-height: 200px;
+			height: 40vw;
+		}
+		@include respond-from(md) {
+			height: 415px;
+		}
+		@include respond-from(lg) {
+			height: 375px;
+		}
+	}
+	.center-inner {
+		height: 100%;
+		width: 100%;
+		vertical-align: middle;
+		display: table-cell;
+		position: relative;
+	}
+
+	//Header Info
+	.hero-info {
+		@include respond-to(md) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		@include respond-from(md) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		
+		h1,
+		h5 {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.infographic {
+			width: 125px;
+		}
+		.info-numbers {
+			@extend .col-flex;
+			height: 80px;
+			width: 80px;
+			text-align: center;
+			border-radius: 50%;
+			padding: 0;
+			margin: auto;
+			background-color: white;
+		}
+		p.caption {
+			color: white;
+			text-align: center;
+			padding-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+//===== FOOTER =====
+
+//Remember to @include mixin in style.scss
+@mixin footer {
+	.footer {
+    @include respond-from(md) {
+      padding-left: 0;
+      padding-right: 0;      
+    }
+    
+		.fbk,
+		.twit,
+		.linkd,
+		.insta,
+		.youtu,
+		.tumblr {
+			height: 48px;
+			width: 48px;
+			display: inline-block;
+
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+		.fbk {
+			background: transparent url("../img/footer-facebook.svg") no-repeat;
+			width: 28px;
+		}
+		.twit {
+			background: transparent url("../img/footer-twitter.svg") no-repeat;
+		}
+		.linkd {
+			background: transparent url("../img/footer-linkedin.svg") no-repeat;
+		}
+		.youtu {
+			background: transparent url("../img/footer-youtube.svg") no-repeat;
+		}
+		.insta {
+			background: transparent url("../img/footer-instagram.svg") no-repeat;
+		}
+		.tumblr {
+			background: transparent url("../img/footer-tumblr.svg") no-repeat;
+			width: 28px;
+		}
+	}
+  .footer-bg {
+		background-color: $cv-dark-gray;    
+  }
+	.footer a {
+		text-decoration: none;
+
+		&:active,
+		&:focus,
+		&:hover {
+			color: lighten($base-font-color, 22%);
+		}
+	}
+}

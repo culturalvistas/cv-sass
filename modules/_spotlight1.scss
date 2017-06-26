@@ -1,0 +1,25 @@
+//===== SPOTLIGHT1 =====
+
+//Remember to @include mixin in style.scss
+@mixin spotlight1 {
+	.spotlight1 {
+		p.button-container {
+			text-align: left;
+			padding: 0;
+
+			@include respond-to(md) {
+				margin-bottom: 10px;
+			}
+			@include respond-from(md) {
+				margin-bottom: 5px;
+			}
+		}
+		.button {
+			width: 250px;
+			
+			@include respond-from(lg) {
+				width: 280px;
+			}
+		}
+	}
+}

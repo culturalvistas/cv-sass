@@ -1,0 +1,15 @@
+//===== STATS =====
+
+//Remember to @include mixin in style.scss
+@mixin stats {
+	.stats {
+    .col-2,
+		.col-3,
+    p {
+			text-align: center;
+		}
+	}
+  .stats-bg {
+		background-color: $cv-cool-gray;
+  }
+}

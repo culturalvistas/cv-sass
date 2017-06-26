@@ -1,0 +1,31 @@
+//===== INTRODUCTION =====
+
+//Remember to @include mixin in style.scss
+@mixin intro {
+	p.caption2 {
+		padding-top: 4px;
+		padding-bottom: 15px;
+		
+		@include respond-to (md) {
+			font-size: 0.75em;
+		}
+		@include respond-from(md) {
+			font-size: 0.85em;
+		}
+		@include respond-from(lg) {
+			font-size: 0.9em;
+		}
+	}
+	.blue-bar-graph {
+		@extend .flex;
+		font-size: 1.2em;
+		font-weight: 600;
+		color: $cv-blue;
+		height: 25px;
+	}
+	.intro-blue-bar {
+		background-color: $cv-blue;
+		height: 25px;
+		display: inline-block;
+	}
+}

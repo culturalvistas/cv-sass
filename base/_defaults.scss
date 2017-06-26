@@ -1,0 +1,70 @@
+//===== ONLINE ANNUAL REPORT 2016 DEFAULTS =====
+
+//Variables - Theme Background Color
+$main-bg-color:					white;
+$alt-bg-color: 					$cv-off-white;
+$nav-logo-bg-color:			white;
+$nav-bg-color: 					$yseali-dark-blue;
+$accent-color:					$yseali-dark-blue;
+$footer-bg-color: 			$cv-dark-gray;
+
+//Variables - Theme Font
+$base-font-color:				$cv-warm-gray;
+$base-font-family:			$cv-font-stack;
+$cond-font-family:			$cv-font-stack-cond;
+$base-font-size:				14pt;
+$base-line-height:			1.35em;
+$base-font-weight:			300;
+$base-heading-color:		white;
+$second-heading-color:	$yseali-dark-blue;
+
+//Variables - Theme Animations
+$hover-bg:							background-color 0.2s ease-out;
+$hover-text:						color 0.2s ease-out;
+
+//Remember to @include mixin in style.scss
+@mixin defaults {
+	html {
+		background-color: $main-bg-color;
+	}
+	body,
+	p,
+	li,
+	%font-reset {
+		font-family: $base-font-family;
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		font-weight: $base-font-weight;
+		color: $base-font-color;
+	}
+	strong {
+		font-size: 0.975em;
+		font-weight: 600;
+	}
+	em {
+		font-style: italic;
+	}
+	sup {
+		font-size: 0.6em;
+		font-weight: 300;
+	}
+  img {
+    width: 100%;
+  }
+  .hr {
+		@extend .base-side-padding;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    hr {
+			background-color: $accent-color;
+			height: 1px;
+    }
+  }
+	.alt-bg {
+		background-color: $alt-bg-color;
+	}
+  .accent-bg {
+    background-color: $accent-color;
+  }
+}

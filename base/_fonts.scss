@@ -1,0 +1,6 @@
+//===== FONTS =====
+
+//Variable - Fonts
+$default-font-stack:		(Helvetica, Arial, sans-serif);  //Web-safe Font
+$cv-font-stack:					append('proxima-nova', $default-font-stack, comma);
+$cv-font-stack-cond:		append('proxima-nova-alt-condensed', $default-font-stack, comma);

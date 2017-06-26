@@ -1,0 +1,10 @@
+//===== LISTS =====
+
+//Remember to @include mixin in style.scss
+@mixin lists {
+	.li {
+		list-style: disc;
+		margin-left: 20px;
+		margin-bottom: 2px;
+	}
+}

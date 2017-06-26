@@ -1,0 +1,94 @@
+//===== BUTTONS =====
+
+//Remember to @include mixin in style.scss
+@mixin buttons {
+	.button {
+		transition: $hover-bg;
+		font-size: 0.95em;
+		text-decoration: none;
+		color: white;
+		padding: 10px 20px;
+		display: inline-block;
+		cursor: pointer;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: white;
+		}
+	}
+	.button-blue {
+		background-color: $cv-blue;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($cv-blue, 5%);
+		}
+	}
+	.button-green {
+		background-color: $cv-green;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($cv-green, 5%);
+		}
+	}
+	.button-orange {
+		background-color: $cv-orange;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($cv-orange, 5%);
+		}
+	}
+	.button-warm-gray {
+		background-color: $cv-warm-gray;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($cv-warm-gray, 7%);
+		}
+	}
+	.button-cool-gray {
+		background-color: $cv-cool-gray;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: darken($cv-cool-gray, 7%);
+		} 
+	}
+	.button-dark-gray {
+		background-color: $cv-dark-gray;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			background-color: lighten($cv-dark-gray, 7%);
+		}
+	}
+	.button-white {
+		color: $cv-warm-gray;
+		background-color: white;
+		
+		&:active,
+		&:focus,
+		&:hover {
+			color: $cv-warm-gray;
+			background-color: darken(white, 9%);
+		}
+	}
+	p.button-container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+		@include respond-to(md) {
+			text-align: center;
+		}
+	}
+}

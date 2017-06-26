@@ -1,0 +1,21 @@
+//===== CALLOUTS =====
+
+//Remember to @include mixin in style.scss
+@mixin callouts {
+	.call-out {
+		background-color: $cv-warm-gray;
+		padding: 5px 15px;
+		margin: 10px 0;
+		
+		p {
+			color: white;
+		}
+	}
+	.photos .call-out {
+		background-color: $alt-bg-color;
+		
+		p {
+			color: $base-font-color;
+		}
+	}
+}

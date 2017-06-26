@@ -1,0 +1,65 @@
+//===== CONNECT =====
+
+//Remember to @include mixin in style.scss
+@mixin connect {
+	.connect {
+		h2, p {
+			text-align: center;
+			color: white;
+		}
+		.row-flex {
+			text-align: center;
+			
+			@include respond-to(lg) {
+				padding-left: 120px;
+				padding-right: 120px;
+			}
+			@include respond-from(lg) {
+				padding-left: 150px;
+				padding-right: 150px;
+			}
+		}
+		.fbk,
+		.twit,
+		.linkd,
+		.insta,
+		.youtu,
+		.tumblr {
+			height: 50px;
+			width: 50px;
+			margin-bottom: 10px;
+			display: inline-block;
+			
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+		.fbk {
+			background: transparent url("../img/social-facebook.svg") no-repeat;
+			width: 25px;
+		}
+		.twit {
+			background: transparent url("../img/social-twitter.svg") no-repeat;
+		}
+		.linkd {
+			background: transparent url("../img/social-linkedin.svg") no-repeat;
+		}
+		.youtu {
+			background: transparent url("../img/social-youtube.svg") no-repeat;
+		}
+		.insta {
+			background: transparent url("../img/social-instagram.svg") no-repeat;
+		}
+		.tumblr {
+			background: transparent url("../img/social-tumblr.svg") no-repeat;
+			width: 25px;
+			
+		}
+		.button.button-white {
+			color: $cv-blue;
+		}
+	}
+  .connect-bg {
+    background-color: $cv-blue;
+  }
+}

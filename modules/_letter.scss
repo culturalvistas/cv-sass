@@ -1,0 +1,49 @@
+//===== LETTER =====
+
+//Remember to @include mixin in style.scss
+@mixin letter {
+	.letter {
+		@include respond-from(md) {
+			padding-bottom: 0;
+		}
+	}
+	.executive-staff {
+		@include respond-to(md) {
+			padding-top: 15px;
+		}
+		@include respond-from(md) {
+			width: 116px;  //width corresponds to the max-width before Elizabeth's name stacks to the next line
+			padding-top: 40px;
+		}
+		
+		img {
+			@include respond-to(md){
+				display: none;
+			}
+		}
+		&.first {
+			@include respond-to(md){
+				padding-top: 40px;
+			}
+		}
+	}
+	.letter .executive-staff p {
+		text-align: center;
+		padding: 0;
+		
+		@media (max-width: 500px) {
+			text-align: left;
+		}
+	}
+	.letter p.staff-footer {
+		font-size: 0.6em;
+		text-align: center;
+		padding-top: 55px;
+		padding-bottom: 5px;
+		clear: both;
+		
+		@include respond-to(md){
+			display: none;
+		}
+	}
+}
